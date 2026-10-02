@@ -91,6 +91,8 @@ footer{background:var(--book);padding:clamp(75px,9vw,140px) 0 30px}.footer-grid{
 .beauty-quote,.chesterton-beat{min-height:75vh;display:flex;align-items:center;background:var(--ink);color:var(--paper);padding-block:100px}
 .beauty-quote .kicker,.chesterton-beat .kicker{color:#dec4c6}
 .beauty-quote blockquote,.chesterton-beat blockquote{font:400 clamp(2.8rem,5.2vw,6.4rem)/1.15 var(--display);max-width:1270px;margin:0}
+.benedict-quote-layout{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.7fr);gap:5vw;align-items:center}.benedict-portrait{margin:0}.benedict-portrait img{width:100%;height:auto}.benedict-portrait figcaption{margin-top:12px;color:#dec4c6;font-size:.6rem;letter-spacing:.04em}.beauty-quote .benedict-quote-layout blockquote{font-size:clamp(2.5rem,3.9vw,4.8rem)}
+@media(max-width:760px){.benedict-quote-layout{grid-template-columns:1fr;gap:35px}.benedict-portrait{width:min(65%,280px)}.beauty-quote .benedict-quote-layout blockquote{font-size:clamp(2.3rem,7vw,3.5rem)}}
 .chesterton-beat{background:var(--ox)}
 .chesterton-beat blockquote{font-size:clamp(3.2rem,5.9vw,7rem)}
 .scripture-grid,.benedict{grid-template-columns:1fr}
@@ -149,3 +151,31 @@ footer{background:var(--book);padding:clamp(75px,9vw,140px) 0 30px}.footer-grid{
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progress{transition:none}}
 @media print{.site-header,.hero-start,.question-panel,.video-shell,.back-top{display:none!important}.hero,.chapter,.closing,.sheen-quote{min-height:0;break-inside:avoid;padding:40px 0}.hero-media,.sheen-backdrop{display:none}.hero{color:var(--ink);background:var(--paper)}.chapter-dark,.chapter-ox,.closing,.sheen-quote,.sheen-chapter{color:var(--ink);background:var(--paper)}.chapter-heading,.sheen-intro{padding:30px 0}.chapter-heading h2,.sheen-intro h2,.closing h2{font-size:4rem}.spread{min-height:0}.image-figure img{max-height:300px}.wrap{width:100%}}
+
+.beauty-quote .quote-accent{color:#dec4c6;font-style:italic}
+.scripture-head.matthew-passage h2{font-size:clamp(2.4rem,3.7vw,4.4rem);line-height:1.17}.scripture-head.matthew-passage .matthew-conclusion{font:400 clamp(2.8rem,4.5vw,5.3rem)/1.12 var(--display);max-width:1050px;color:var(--ox);margin:2.5rem 0 0}
+
+/* David: full-screen image with the quote overlaid. */
+.opening-spread{position:relative;isolation:isolate;display:flex;width:100%;min-height:calc(100svh - var(--header));margin:0;padding:clamp(70px,8vw,120px) 4vw;overflow:hidden;background:var(--ink);color:var(--paper)}
+.opening-spread .david{position:absolute;inset:0;z-index:-2;height:100%}
+.opening-spread .david img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center 25%}
+.opening-spread::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(27,28,26,.93) 0%,rgba(27,28,26,.75) 38%,rgba(27,28,26,.18) 72%,rgba(27,28,26,.05) 100%)}
+.opening-spread .spread-copy{width:52%;max-width:700px}
+.opening-spread .kicker{color:#dec4c6}
+.opening-spread .attribution{color:var(--paper)}
+.opening-spread h2{font-size:clamp(2.8rem,4.8vw,5.5rem);line-height:1.12}
+@media(max-width:760px){.opening-spread{min-height:calc(100svh - var(--header));align-items:flex-end;padding:70px 20px}.opening-spread .spread-copy{width:100%;max-width:560px}.opening-spread .david img{object-position:60% top}.opening-spread::after{background:linear-gradient(0deg,rgba(27,28,26,.95),rgba(27,28,26,.72) 45%,rgba(27,28,26,.12) 100%)}.opening-spread h2{font-size:clamp(2.5rem,7vw,4rem)}}
+
+.original-cloud-visual{min-height:calc(100svh - var(--header));display:flex;align-items:center;justify-content:center;background:var(--ink);padding:20px}.original-cloud-visual img{width:100%;height:calc(100svh - var(--header) - 40px);object-fit:contain}
+
+.original-cloud-visual{position:relative;isolation:isolate;padding:0;overflow:hidden;color:var(--paper)}
+.original-cloud-visual img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center}
+.original-cloud-visual::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(27,28,26,.9),rgba(27,28,26,.5) 60%,rgba(27,28,26,.15))}
+.cloud-quote{width:min(100% - 8vw,1100px);margin:0;padding:clamp(80px,10vw,150px) 0;align-self:flex-end;font:400 clamp(2.6rem,4.6vw,5.5rem)/1.14 var(--display);text-wrap:balance;text-shadow:0 2px 16px #0005}
+.cloud-quote em{color:#dec4c6}
+@media(max-width:760px){.cloud-quote{width:calc(100% - 40px);font-size:clamp(2.4rem,7vw,3.6rem);padding:90px 0 60px}.original-cloud-visual img{object-position:center}}
+
+.cloud-copy{width:min(100% - 8vw,1100px);align-self:flex-end;padding:clamp(80px,10vw,150px) 0}.cloud-copy .kicker{color:#dec4c6;margin-bottom:24px}.cloud-copy .cloud-quote{width:100%;padding:0}
+.culture-frame{background:var(--paper);padding:clamp(35px,4vw,65px) 0 24px;min-height:calc(100svh - var(--header))}.culture-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px}.culture-heading h2{font-size:clamp(2.8rem,4.3vw,5.2rem);max-width:1050px;margin:0}.culture-heading h2 em{color:var(--ox)}.culture-heading .kicker{white-space:nowrap;margin:0 0 8px}.culture-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.culture-card{margin:0;background:var(--ink);color:var(--paper);overflow:hidden}.culture-card img{width:100%;height:clamp(150px,24svh,290px);object-fit:cover}.culture-st-louis img{object-position:center 47%}.culture-santa img{object-position:center 30%}.culture-valentine img{object-fit:contain;background:#eee2cf}.culture-card figcaption{padding:14px 18px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}.culture-card strong{font:400 clamp(1.35rem,2vw,2rem)/1.1 var(--display)}.culture-card span{font-size:clamp(.67rem,.8vw,.85rem);color:#dec4c6;line-height:1.3;text-align:right}.culture-credit{font-size:.56rem;color:var(--muted);margin:18px 0 0;letter-spacing:.02em}
+@media(max-width:900px){.culture-heading{display:block}.culture-heading .kicker{margin:16px 0 0}.culture-card figcaption{display:block}.culture-card span{display:block;text-align:left;margin-top:6px}}
+@media(max-width:600px){.culture-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.culture-card img{height:170px}.culture-card figcaption{padding:12px}.culture-card strong{font-size:1.35rem}.cloud-copy{width:calc(100% - 40px);padding:80px 0 60px}.culture-heading h2{font-size:2.8rem}}

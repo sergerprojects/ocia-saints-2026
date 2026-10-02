@@ -1,16 +1,10 @@
 (() => {
   const menu = document.getElementById('chapter-menu');
-  const status = document.getElementById('chapter-status');
   const progress = document.getElementById('progress');
-  const chapters = [...document.querySelectorAll('.chapter[data-chapter]')];
 
   function updateScroll() {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     progress.style.width = `${scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0}%`;
-    const line = window.scrollY + window.innerHeight * .36;
-    let active = chapters[0];
-    for (const chapter of chapters) if (chapter.offsetTop <= line) active = chapter;
-    status.textContent = active.dataset.chapter;
   }
   window.addEventListener('scroll', updateScroll, { passive: true });
   window.addEventListener('resize', updateScroll, { passive: true });
