@@ -87,11 +87,32 @@
   configureMotion();
   initializeReveals();
 
+  document.querySelectorAll('.saint-flip').forEach(button => {
+    const front = button.querySelector('.saint-card-front');
+    const back = button.querySelector('.saint-card-back');
+    function setFlipped(flipped) {
+      button.classList.toggle('is-flipped', flipped);
+      button.setAttribute('aria-pressed', String(flipped));
+      button.setAttribute('aria-label', flipped ? `Show ${button.dataset.name}’s portrait` : `Show ${button.dataset.name}’s story`);
+      front.setAttribute('aria-hidden', String(flipped));
+      back.setAttribute('aria-hidden', String(!flipped));
+      if (flipped) button.setAttribute('aria-describedby', back.id);
+      else button.removeAttribute('aria-describedby');
+    }
+    button.addEventListener('click', () => setFlipped(!button.classList.contains('is-flipped')));
+    button.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && button.classList.contains('is-flipped')) {
+        setFlipped(false);
+        event.stopPropagation();
+      }
+    });
+  });
+
   const loadVideo = document.getElementById('load-video');
   loadVideo?.addEventListener('click', () => {
     const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube-nocookie.com/embed/Bta7B7quts4?rel=0&autoplay=1&playsinline=1';
-    iframe.title = 'Fulton Sheen: Gloom, Laughter and Humor — archival video';
+    iframe.src = 'https://www.youtube-nocookie.com/embed/Wgk4mdXHsCw?start=5758&rel=0&autoplay=1&playsinline=1';
+    iframe.title = 'Sheen Gems: The Best of Fulton J. Sheen — archival video';
     iframe.allow = 'autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;
     iframe.referrerPolicy = 'strict-origin-when-cross-origin';
