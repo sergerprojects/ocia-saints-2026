@@ -329,3 +329,368 @@ img{height:auto}
 .original-cloud-visual img{object-position:center top}
 .witness img{object-fit:contain;object-position:right center}
 @media(max-width:760px){.witness img{object-position:center top}}
+
+/* The beatification recap and both photographs share one presentation frame. */
+.sheen-beatification-frame{min-height:var(--frame);background:#181916;color:var(--paper);padding:28px 4vw 20px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.sheen-news-grid{display:grid;grid-template-columns:9fr 13fr;gap:16px;width:min(100%,1100px,calc((var(--frame) - 76px)*1.375));aspect-ratio:22/16;margin-inline:auto;min-height:0}
+.sheen-news-video{min-width:0;min-height:0;display:flex;justify-content:center;background:#0e0f0d}
+.sheen-news-video iframe{display:block;max-width:100%;width:100%;height:100%;border:0;background:#0e0f0d}
+.sheen-news-photos{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,1fr);gap:16px;min-width:0;min-height:0}
+.sheen-news-photos figure{margin:0;min-height:0;overflow:hidden;background:#0e0f0d}
+.sheen-news-photos img{width:100%;height:100%;object-fit:contain;display:block}
+.sheen-news-credit{margin:0 auto;width:min(100%,1100px);font-size:.55rem;letter-spacing:.03em;color:#bbb4aa}
+@media(max-width:760px){
+ .sheen-beatification-frame{padding:24px 16px 20px;min-height:var(--frame)}
+ .sheen-news-grid{gap:8px;grid-template-columns:9fr 13fr}
+ .sheen-news-photos{gap:8px}
+ .sheen-news-credit{font-size:.48rem}
+}
+
+/* Slightly stronger emphasis for phrases already accented in the presentation. */
+.quote-accent,.beauty-quote .quote-accent,.cloud-quote em,.closing h2 em{color:#efb1b8;-webkit-text-stroke:.18px currentColor}
+.culture-heading h2 em{color:#87303d;-webkit-text-stroke:.18px currentColor}
+
+/* Full Hebrews 12:1 above the existing six-image collage. */
+.culture-heading.culture-scripture{align-items:flex-start;gap:28px;margin-bottom:24px}
+.culture-heading.culture-scripture h2{font-size:clamp(1.55rem,2.15vw,2.8rem);line-height:1.18;max-width:1100px}
+.culture-heading.culture-scripture .kicker{margin-top:.5em}
+@media(min-width:900px) and (max-height:900px){
+ #saints-around-us .culture-card img{height:20svh;min-height:125px}
+}
+@media(max-width:760px){
+ .culture-heading.culture-scripture h2{font-size:1.55rem;line-height:1.2}
+ .culture-heading.culture-scripture .kicker{margin-top:16px}
+}
+
+/* Benedict’s photograph fills the frame, with the original quote overlaid. */
+.beauty-quote{position:relative;isolation:isolate;overflow:hidden;padding:0;min-height:var(--frame);background:#171916}
+.beauty-quote .benedict-quote-layout{position:static;display:flex;align-items:center;gap:0;min-height:var(--frame);padding-block:64px}
+.beauty-quote .benedict-portrait{position:absolute;inset:0;width:100%;max-width:none;height:100%;margin:0;z-index:-2;overflow:visible}
+.beauty-quote .benedict-portrait img{display:block;width:100%;height:100%;max-height:none;object-fit:cover;object-position:center 43%}
+.beauty-quote::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#171916f2 0%,#171916d9 30%,#17191699 47%,#17191612 70%),linear-gradient(0deg,#17191675,transparent 45%)}
+.beauty-quote .benedict-quote-layout>div{position:relative;width:49%;max-width:760px;z-index:1}
+.beauty-quote .benedict-quote-layout blockquote{font-size:clamp(2rem,3.2vw,4.5rem);line-height:1.12;text-shadow:0 2px 18px #0005}
+.beauty-quote .kicker{margin-bottom:30px;color:var(--rose)}
+.beauty-quote .benedict-portrait figcaption{position:absolute;right:4vw;bottom:22px;margin:0;padding:0;color:var(--paper);font-size:.55rem;letter-spacing:.04em;text-shadow:0 1px 6px #000}
+@media(max-width:760px){
+ .beauty-quote{min-height:max(var(--frame),780px)}
+ .beauty-quote .benedict-quote-layout{min-height:max(var(--frame),780px);align-items:flex-end;padding-block:65px 52px}
+ .beauty-quote .benedict-portrait img{object-position:60% top}
+ .beauty-quote::after{background:linear-gradient(0deg,#171916f5 0%,#171916da 30%,#17191666 54%,#17191611 73%,transparent)}
+ .beauty-quote .benedict-quote-layout>div{width:100%;max-width:600px}
+ .beauty-quote .benedict-quote-layout blockquote{font-size:clamp(1.5rem,6.7vw,2.6rem);line-height:1.14}
+ .beauty-quote .kicker{margin-bottom:24px;font-size:.64rem}
+ .beauty-quote .benedict-portrait figcaption{right:20px;bottom:16px;font-size:.48rem}
+}
+
+.beauty-quote .benedict-portrait{z-index:auto;pointer-events:none}
+.beauty-quote .benedict-portrait img{position:absolute;inset:0;z-index:-2}
+.beauty-quote .benedict-portrait figcaption{z-index:2;background:#17191699;padding:5px 8px}
+
+/* Original catacombs visual, restored before the responsibility question. */
+.catacombs-prayer-frame{position:relative;isolation:isolate;overflow:hidden;min-height:var(--frame);display:flex;align-items:center;padding-block:48px;background:var(--ink);color:var(--paper)}
+.catacombs-prayer-frame>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center}
+.catacombs-prayer-frame::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#26272511,#26272522 48%,#26272555)}
+.catacombs-prayer-frame>.wrap{display:flex;justify-content:flex-end}
+.catacombs-prayer-copy{width:48%;padding:clamp(24px,3vw,46px);background:#722e36c7;backdrop-filter:blur(2px);border-top:2px solid #efb1b8}
+.catacombs-prayer-copy blockquote{margin:0;font:400 clamp(1.6rem,2.4vw,2.8rem)/1.18 var(--display)}
+.catacombs-prayer-copy .kicker{margin:24px 0 0;color:var(--paper);font-size:.68rem}
+@media(max-width:760px){
+ .catacombs-prayer-frame{min-height:max(var(--frame),780px);align-items:flex-end;padding-block:70px 36px}
+ .catacombs-prayer-frame>img{object-position:left center}
+ .catacombs-prayer-copy{width:100%;padding:24px;background:#722e36df}
+ .catacombs-prayer-copy blockquote{font-size:clamp(1.5rem,6.2vw,2.2rem)}
+}
+
+/* Let the catacombs remain the scene; typography sits directly over the image. */
+.catacombs-prayer-frame::after{background:linear-gradient(90deg,#17191600 0%,#17191622 35%,#171916b3 57%,#171916ed 100%),linear-gradient(0deg,#17191655,transparent 50%)}
+.catacombs-prayer-copy{width:48%;padding:0;background:none;border:0;backdrop-filter:none}
+.catacombs-prayer-copy blockquote{font-size:clamp(2rem,3.1vw,3.8rem);line-height:1.12;text-shadow:0 2px 20px #0005}
+.prayer-invitation,.prayer-promise{display:block}
+.prayer-promise{margin-top:1.05em;font-size:.74em;line-height:1.25;color:var(--paper)}
+.catacombs-prayer-copy em{color:#efb1b8;-webkit-text-stroke:.18px currentColor}
+.catacombs-prayer-copy .kicker{margin-top:30px;padding-top:18px;border-top:1px solid #f4f0e655;max-width:230px;letter-spacing:.12em}
+@media(max-width:760px){
+ .catacombs-prayer-frame::after{background:linear-gradient(0deg,#171916f5 0%,#171916d9 34%,#17191666 57%,transparent 80%)}
+ .catacombs-prayer-copy{width:100%;padding:0;background:none}
+ .catacombs-prayer-copy blockquote{font-size:clamp(1.7rem,7vw,2.5rem)}
+ .prayer-promise{font-size:.78em;margin-top:1em}
+ .catacombs-prayer-copy .kicker{margin-top:24px}
+}
+
+/* Align the labels with the fresco’s upper, middle, and lower registers. */
+@media(min-width:761px){
+ .churches-labels{position:absolute;left:0;top:50%;bottom:auto;width:35%;height:min(100%,calc(83vw * 1731 / 2200));translate:0 -50%;display:block;padding:0;margin:0;z-index:2}
+ .churches-labels p{position:absolute;left:4vw;translate:0 -50%;font-size:clamp(1.8rem,3.2vw,3.8rem);line-height:1.06}
+ .churches-labels p:nth-child(1){top:24%}
+ .churches-labels p:nth-child(2){top:53%}
+ .churches-labels p:nth-child(3){top:83%}
+ .churches-labels p::after{content:"";position:absolute;left:calc(100% + 14px);top:50%;width:clamp(28px,5vw,80px);height:1px;background:#dec4c688}
+}
+@media(max-width:760px){
+ .churches-visual{position:relative;display:block}
+ .communion-painting .sequence-stage::after{display:none}
+ .churches-visual::after{content:"";position:absolute;inset:0 -20px;pointer-events:none;background:linear-gradient(90deg,#262725eb,#262725a6 28%,transparent 60%)}
+ .churches-labels{position:absolute;inset:0;width:45%;height:100%;margin:0;padding:0;display:block;z-index:2}
+ .churches-labels p{position:absolute;left:0;padding:0 0 0 10px;border:0;font-size:clamp(.9rem,4vw,1.5rem);line-height:1.06;translate:0 -50%}
+ .churches-labels p:nth-child(1){top:24%}
+ .churches-labels p:nth-child(2){top:53%}
+ .churches-labels p:nth-child(3){top:83%}
+ .churches-labels p::before{display:block;width:1px;transform:scaleY(1)}
+}
+
+/* Scripture and Aquinas presented together, without adding teaching copy. */
+.intercession-quotes{min-height:var(--frame);display:flex;align-items:center;padding:clamp(48px,6svh,80px) 0;background:var(--paper);color:var(--ink);border-top:3px solid var(--ox)}
+.intercession-quotes>.wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7vw;align-items:center}
+.intercession-quotes figure{position:relative;margin:0}
+.intercession-quotes .kicker{color:var(--ox);margin:0 0 30px;font-size:.72rem;letter-spacing:.15em}
+.intercession-quotes blockquote{margin:0;font:400 clamp(2rem,2.75vw,3.75rem)/1.16 var(--display)}
+.intercession-quotes em{color:#87303d;-webkit-text-stroke:.18px currentColor}
+.intercession-quotes .aquinas-witness{padding-left:4vw;border-left:1px solid var(--rule)}
+.intercession-quotes .aquinas-witness blockquote{font-size:clamp(1.9rem,2.55vw,3.5rem)}
+@media(max-width:760px){
+ .intercession-quotes{padding-block:60px}
+ .intercession-quotes>.wrap{grid-template-columns:1fr;gap:44px}
+ .intercession-quotes .kicker{margin-bottom:24px;font-size:.65rem}
+ .intercession-quotes blockquote{font-size:clamp(1.8rem,7vw,2.5rem)}
+ .intercession-quotes .aquinas-witness{padding:36px 0 0;border-left:0;border-top:1px solid var(--rule)}
+ .intercession-quotes .aquinas-witness blockquote{font-size:clamp(1.7rem,6.6vw,2.3rem)}
+}
+
+/* Relics and the familiar devotion in our own parish. */
+.relic-gallery{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+.relic-gallery .parish-photo img{object-fit:contain}
+@media(max-width:760px){.relic-gallery{grid-template-columns:1fr}}
+
+.relic-gallery .relic-gallery-title{grid-column:1 / -1;font-size:clamp(2.7rem,4.7vw,5.6rem);margin:0 0 clamp(12px,2vh,24px);color:var(--ox)}
+
+/* Polycarp: the early Church's answer, directly after the relic photographs. */
+.polycarp-frame{position:relative;isolation:isolate;display:flex;width:100%;max-width:none;margin:0;min-height:var(--frame);overflow:hidden;padding:clamp(64px,9vh,120px) 4vw;justify-content:flex-end;background:var(--ink);color:var(--paper)}
+.polycarp-frame .image-figure{position:absolute;inset:0;z-index:-2;width:100%;height:100%}
+.polycarp-frame .image-figure img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:45% center}
+.polycarp-frame::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#26272508 0%,#26272518 32%,#262725b8 55%,#262725f5 76%,#262725 100%)}
+.polycarp-frame .spread-copy{width:43%;max-width:640px;position:relative;z-index:1}
+.polycarp-frame .kicker{color:var(--rose);font-size:clamp(.65rem,.9vw,.85rem);margin-bottom:clamp(24px,4vh,45px)}
+.polycarp-frame .spread-copy h2{font-size:clamp(2.25rem,3.55vw,4.6rem);line-height:1.12;margin:0;text-wrap:pretty}
+@media(max-width:760px){
+ .polycarp-frame{min-height:max(var(--frame),780px);align-items:flex-end;padding:80px 20px 65px}
+ .polycarp-frame .image-figure img{object-position:48% top}
+ .polycarp-frame::before{background:linear-gradient(0deg,#262725 0%,#262725f2 25%,#262725bb 49%,#26272515 80%)}
+ .polycarp-frame .spread-copy{width:100%;max-width:600px}
+ .polycarp-frame .spread-copy h2{font-size:clamp(2.15rem,7.2vw,3.3rem)}
+}
+
+.polycarp-frame .spread-copy h2{font-size:clamp(1.6rem,2.25vw,3rem);line-height:1.2}
+@media(max-width:760px){.polycarp-frame .spread-copy h2{font-size:clamp(1.4rem,5.6vw,2.1rem);line-height:1.2}}
+
+/* Original visual bridge: the ways we remember our own loved ones. */
+.modern-remembrance{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));grid-template-rows:1fr 1fr;gap:clamp(6px,1vw,14px);height:var(--frame);min-height:620px;padding:clamp(14px,2vw,28px);background:var(--ink)}
+.modern-remembrance figure{margin:0;min-width:0;min-height:0;overflow:hidden}
+.modern-remembrance img{height:100%;width:100%;object-fit:cover}
+.remembrance-lincoln{grid-column:1 / 5}.remembrance-graves{grid-column:5 / 9}
+.remembrance-keepsakes{grid-column:1 / 5}.remembrance-hair{grid-column:5 / 7}.remembrance-watch{grid-column:7 / 9}
+.remembrance-lincoln img{object-position:center 36%}
+.remembrance-hair img,.remembrance-watch img{object-fit:contain;background:#eee8dc}
+@media(max-width:760px){
+ .modern-remembrance{grid-template-columns:1fr 1fr;grid-template-rows:1fr .85fr 1fr;min-height:780px;padding:12px;gap:8px}
+ .modern-remembrance .remembrance-lincoln{grid-column:1}.modern-remembrance .remembrance-graves{grid-column:2}
+ .modern-remembrance .remembrance-keepsakes{grid-column:1 / -1}
+ .modern-remembrance .remembrance-hair{grid-column:1}.modern-remembrance .remembrance-watch{grid-column:2}
+}
+
+/* Keep the source photograph's bottom-edge blog mark outside the presentation crop. */
+.polycarp-frame .image-figure{overflow:hidden}
+.polycarp-frame .image-figure img{height:107%;max-height:none;object-position:45% top}
+@media(max-width:760px){.polycarp-frame .image-figure img{object-position:48% top}}
+
+.modern-remembrance .remembrance-hair img{object-fit:cover;object-position:center}
+
+/* The full council passage, with the emphasis from the original slide. */
+.holiness-quote{min-height:var(--frame);display:flex;align-items:center;background:var(--ink);padding:clamp(65px,10vh,130px) 0}
+.holiness-quote>.wrap{max-width:1120px}
+.holiness-quote blockquote{margin:0;font:400 clamp(2rem,3.6vw,4.6rem)/1.2 var(--display);color:#c1bcb3;text-wrap:pretty}
+.holiness-quote blockquote em{color:#efb1b8;-webkit-text-stroke:.18px currentColor}
+.holiness-verse{display:block;color:var(--paper);font-size:1.13em;line-height:1.13;margin-top:.65em}
+.holiness-source{margin:clamp(30px,5vh,60px) 0 0;padding-top:20px;border-top:1px solid #dec4c644;color:var(--rose);font:500 .78rem/1.5 var(--body);letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:760px){.holiness-quote blockquote{font-size:clamp(1.9rem,6.7vw,3rem)}.holiness-source{font-size:.65rem}}
+
+/* Give the question room, and let the answer carry the final emphasis. */
+.merton-spread{min-height:var(--frame);padding-block:clamp(70px,10vh,130px)}
+.merton-spread .spread-copy{width:49%;max-width:660px}
+.merton-spread .kicker{font-size:clamp(.65rem,.85vw,.8rem);letter-spacing:.11em;margin-bottom:clamp(30px,5vh,55px)}
+.merton-spread h2{font-size:clamp(2.8rem,4.4vw,5.5rem);line-height:1.08;margin-bottom:0;text-wrap:balance}
+.merton-spread .merton-answer{margin-top:clamp(32px,5vh,60px);font-size:clamp(1.5rem,2.1vw,2.6rem);line-height:1.25;color:#d8d2c8;max-width:590px}
+.merton-answer .quote-accent{display:block;font-size:1.5em;line-height:1.1;margin-top:.32em;color:#efb1b8;-webkit-text-stroke:.18px currentColor}
+@media(max-width:760px){
+ .merton-spread{padding:85px 20px 65px;min-height:max(var(--frame),800px)}
+ .merton-spread .spread-copy{width:100%}
+ .merton-spread h2{font-size:clamp(2.65rem,8.2vw,4rem)}
+ .merton-spread .merton-answer{font-size:clamp(1.45rem,5.5vw,2rem);margin-top:30px}
+}
+
+/* The six original holy cards, together as a single visual frame. */
+.holy-card-wall{min-height:var(--frame);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:center;gap:clamp(10px,1.5vw,28px);padding:clamp(50px,8vh,100px) 3vw;background:#1b1c1a}
+.holy-card-wall figure{margin:0;min-width:0;filter:drop-shadow(0 12px 16px #0005)}
+.holy-card-wall img{width:100%;height:clamp(300px,57svh,670px);object-fit:contain}
+@media(min-width:761px) and (max-width:1000px){.holy-card-wall{grid-template-columns:repeat(3,minmax(0,1fr));padding:30px 6vw;gap:20px}.holy-card-wall img{height:34svh;min-height:240px}}
+@media(max-width:760px){.holy-card-wall{grid-template-columns:repeat(3,minmax(0,1fr));padding:50px 15px;gap:24px 12px}.holy-card-wall img{height:32svh;min-height:225px}}
+
+/* All seven Padre Pio visual aids from the original Keynote, in one frame. */
+.pio-collage{min-height:var(--frame);display:flex;align-items:center;padding:clamp(35px,5vh,70px) 0;background:#1b1c1a;color:var(--paper)}
+.pio-collage h2{font-size:clamp(2.5rem,4.1vw,5rem);line-height:1.06;margin:0 0 clamp(28px,4vh,48px)}
+.pio-image-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
+.pio-image-grid figure{margin:0;min-width:0;display:flex;flex-direction:column;justify-content:center}
+.pio-image-grid img{width:100%;height:clamp(170px,27svh,320px);object-fit:contain}
+.pio-image-grid .pio-body{grid-column:2 / 4}
+.pio-image-grid figcaption{font:400 .65rem/1.4 var(--body);color:var(--rose);text-align:center;margin-top:9px}
+@media(max-width:760px){
+ .pio-collage{padding:50px 0}
+ .pio-collage h2{font-size:clamp(2.1rem,7.2vw,3rem)}
+ .pio-image-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;gap:22px 14px}
+ .pio-image-grid img{height:190px}
+ .pio-image-grid .pio-body{grid-column:1 / -1}
+ .pio-image-grid figcaption{font-size:.6rem}
+}
+
+/* Padre Pio as a composed visual mosaic: one anchor portrait, six supporting moments. */
+.pio-collage{background:radial-gradient(ellipse at 15% 30%,#39312a 0%,#21231f 42%,#161815 100%);padding:clamp(28px,4vh,55px) 0;min-height:var(--frame)}
+.pio-collage>.wrap{width:calc(100% - 5vw);max-width:1600px}
+.pio-collage h2{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 .2em;font-size:clamp(3rem,5.2vw,6.3rem);margin-bottom:clamp(22px,3vh,40px);letter-spacing:-.03em}
+.pio-collage h2>span{font-size:.56em;letter-spacing:0;color:#d1c9bd;margin-right:.2em}
+.pio-collage h2 em{color:#efb1b8;-webkit-text-stroke:.18px currentColor}
+.pio-image-grid{height:clamp(470px,calc(var(--frame) - 190px),760px);grid-template-columns:1.45fr 1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:9px}
+.pio-image-grid figure{position:relative;overflow:hidden;display:block;min-height:0;background:#292b26;border:1px solid #e4ddce18}
+.pio-image-grid img{width:100%;height:100%;object-fit:cover;transition:filter .4s ease}
+.pio-image-grid .pio-portrait{grid-column:1;grid-row:1 / 4}
+.pio-portrait img{object-position:50% 30%}
+.pio-image-grid .pio-friends{grid-column:2 / 4;grid-row:1}
+.pio-friends img{object-position:50% 40%}
+.pio-image-grid .pio-vision{grid-column:2;grid-row:2}
+.pio-vision img{object-position:48% center}
+.pio-image-grid .pio-young{grid-column:4;grid-row:1 / 3}
+.pio-young img{object-position:50% 60%}
+.pio-image-grid .pio-pope{grid-column:3;grid-row:2}
+.pio-pope img{object-position:50% 40%}
+.pio-image-grid .pio-body{grid-column:2 / 4;grid-row:3}
+.pio-body img{object-position:50% 75%}
+.pio-image-grid .pio-eyes{grid-column:4;grid-row:3}
+.pio-eyes img{object-fit:contain;background:#dad7ce}
+.pio-image-grid figcaption{position:absolute;inset:auto 0 0;padding:28px 12px 10px;margin:0;background:linear-gradient(transparent,#161815e8);color:var(--paper);text-align:left;font:400 clamp(.6rem,.72vw,.8rem)/1.4 var(--body)}
+@media(max-width:760px){
+ .pio-collage{padding:35px 0}
+ .pio-collage>.wrap{width:calc(100% - 24px)}
+ .pio-collage h2{display:block;font-size:clamp(2.75rem,11vw,4.8rem);margin-bottom:25px}
+ .pio-collage h2>span{display:block;font-size:.46em;margin-bottom:9px}
+ .pio-image-grid{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,150px);gap:7px}
+ .pio-image-grid .pio-portrait{grid-column:1;grid-row:1 / 3}
+ .pio-image-grid .pio-young{grid-column:2;grid-row:1 / 3}
+ .pio-image-grid .pio-friends{grid-column:1 / 3;grid-row:3}
+ .pio-image-grid .pio-vision{grid-column:1;grid-row:4}
+ .pio-image-grid .pio-pope{grid-column:2;grid-row:4}
+ .pio-image-grid .pio-body{grid-column:1;grid-row:5}
+ .pio-image-grid .pio-eyes{grid-column:2;grid-row:5}
+ .pio-image-grid figcaption{font-size:.57rem;padding-inline:8px}
+}
+
+/* Original Homer outro, then a quiet landing for the class break. */
+.homer-clip-frame{min-height:var(--frame);display:flex;align-items:center;justify-content:center;padding:clamp(20px,3vw,45px);background:#161815}
+.homer-clip-frame video{display:block;width:min(100%,1440px);height:auto;max-height:calc(var(--frame) - 60px);aspect-ratio:16 / 9;object-fit:contain;background:#000;box-shadow:0 20px 70px #0006}
+.class-break{min-height:var(--frame);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(28px,4vh,50px);padding:clamp(35px,5vw,70px);position:relative;overflow:hidden;background:radial-gradient(ellipse at top,#482a2e 0%,#242522 65%);color:var(--paper)}
+.class-break h2{font-size:clamp(3rem,6vw,6rem);line-height:1;letter-spacing:.12em;margin:0;font-weight:400}
+.break-images{display:grid;grid-template-columns:.712fr .808fr 1.27fr;align-items:center;gap:clamp(12px,2vw,28px);width:min(100%,1360px);height:min(620px,calc(var(--frame) - 240px))}
+.break-images figure{margin:0;height:100%;min-width:0}
+.break-images img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:760px){
+ .homer-clip-frame{padding:16px;min-height:var(--frame)}
+ .class-break{padding:35px 20px;gap:28px}
+ .class-break h2{font-size:12vw}
+ .break-images{height:auto;grid-template-columns:1fr 1fr;gap:16px;max-width:560px}
+ .break-images figure{height:clamp(230px,60vw,390px)}
+ .break-images .break-pope{grid-column:1 / -1;height:auto}
+ .break-pope img{height:auto}
+}
+
+/* Tap or click to turn a portrait into its brief story. */
+.recognition-gallery .saint-card{perspective:1400px;overflow:visible}
+.saint-flip{display:block;width:100%;border:0;padding:0;background:none;color:inherit;text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.saint-card-inner{display:block;position:relative;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.saint-flip.is-flipped .saint-card-inner{transform:rotateY(180deg)}
+.saint-card-front,.saint-card-back{display:block;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--ink);color:var(--paper)}
+.saint-card-front{position:relative}
+.recognition-caption{display:block;min-height:150px;padding:24px 20px;position:relative}
+.recognition-caption strong{display:block;padding-right:8px}
+.flip-mark{position:absolute;right:14px;bottom:12px;color:#efb1b8;font:400 1.2rem/1 var(--body);letter-spacing:0}
+.saint-card-back{position:absolute;inset:0;transform:rotateY(180deg);padding:clamp(20px,2.1vw,32px);background:linear-gradient(145deg,#79333d,#54232c);border:1px solid #efb1b85c}
+.recognition-gallery .saint-card-back small{font-size:clamp(.6rem,.8vw,.8rem);margin-bottom:16px}
+.recognition-gallery .saint-story-name{display:block;font:400 clamp(1.7rem,2.3vw,2.7rem)/1.08 var(--display);margin-bottom:24px}
+.saint-story-text{display:block;font:400 clamp(.92rem,1.12vw,1.2rem)/1.5 var(--body);color:var(--paper);margin-bottom:26px}
+.saint-facts{display:block;border-top:1px solid #efb1b850;padding-top:20px}
+.saint-fact{display:block;margin-bottom:18px;font:400 clamp(.8rem,.95vw,1.05rem)/1.45 var(--body);color:#eee5df}
+.saint-fact b{display:block;color:#efb1b8;font:600 .65rem/1.4 var(--body);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+.saint-flip:focus-visible{outline:3px solid var(--ox);outline-offset:5px}
+@media(max-width:899px){
+ .recognition-caption{min-height:120px;padding:20px 13px}
+ .saint-card-front{min-height:480px}
+ .recognition-gallery .saint-card-front img{height:350px}
+ .saint-card-back{padding:19px 15px}
+ .recognition-gallery .saint-story-name{font-size:1.55rem;margin-bottom:18px}
+ .saint-story-text{font-size:.85rem;line-height:1.45;margin-bottom:18px}
+ .saint-facts{padding-top:16px}
+ .saint-fact{font-size:.77rem;line-height:1.4;margin-bottom:14px}
+ .saint-fact b{font-size:.57rem}
+}
+@media(max-width:400px){.saint-card-front{min-height:540px}.recognition-gallery .saint-card-front img{height:400px}}
+@media(prefers-reduced-motion:reduce){.saint-card-inner{transition:none}}
+
+@media(min-width:900px) and (max-height:850px){
+ .saint-card-back{padding:20px 18px}
+ .recognition-gallery .saint-card-back small{margin-bottom:12px;font-size:.6rem}
+ .recognition-gallery .saint-story-name{font-size:1.7rem;margin-bottom:14px}
+ .saint-story-text{font-size:.88rem;line-height:1.4;margin-bottom:18px}
+ .saint-facts{padding-top:14px}
+ .saint-fact{font-size:.76rem;line-height:1.4;margin-bottom:12px}
+ .saint-fact b{font-size:.58rem}
+}
+
+/* One supplied calendar image fills the entire frame. */
+.calendar-beat{height:var(--frame);min-height:0;padding:0;overflow:hidden}
+.calendar-beat>.calendar-art{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+
+/* Side-by-side originals with readable headline excerpts. */
+.litany-news{height:var(--frame);min-height:0;padding:clamp(20px,2.3vw,36px);background:#1b1d19;overflow:hidden}
+.litany-news-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.5vw,24px);width:100%;height:100%;min-height:0}
+.litany-news-grid .news-tile{margin:0;min-width:0;min-height:0;display:grid;grid-template-rows:minmax(0,1fr) 360px;background:#252823;border-top:2px solid #ba9290;box-shadow:0 12px 30px #0003}
+.news-image{min-height:0;padding:14px 10px;background:#080a08}
+.news-image img{display:block;width:100%;height:100%;object-fit:contain}
+.news-tile figcaption{padding:clamp(16px,1.6vw,28px);color:var(--paper)}
+.news-source{margin:0 0 18px;font:600 clamp(.72rem,.95vw,.95rem)/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:#efb1b8}
+.news-tile blockquote{margin:0;font:500 clamp(1.6rem,2.25vw,2.8rem)/1.24 var(--body);letter-spacing:-.025em}
+@media(min-width:900px) and (max-height:780px){
+ .litany-news{padding:18px}
+ .litany-news-grid .news-tile{grid-template-rows:minmax(0,1fr) 270px}
+ .news-tile figcaption{padding:18px}
+ .news-tile blockquote{font-size:clamp(1.4rem,1.85vw,2rem)}
+ .news-source{margin-bottom:12px}
+}
+@media(max-width:899px){
+ .litany-news{height:auto;min-height:var(--frame);padding:20px}
+ .litany-news-grid{height:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+ .litany-news-grid .news-tile{grid-template-rows:320px auto}
+ .news-tile blockquote{font-size:clamp(1.4rem,3vw,1.8rem)}
+}
+@media(max-width:500px){
+ .litany-news-grid{grid-template-columns:1fr}
+ .litany-news-grid .news-tile{grid-template-rows:380px auto}
+ .news-tile blockquote{font-size:1.55rem}
+}
+
+/* The complete Spe salvi passage over Benedict's portrait. */
+.spe-salvi-frame .benedict-quote-layout>div{width:52%;max-width:800px}
+.spe-salvi-frame .benedict-quote-layout blockquote{font-size:clamp(1.5rem,2.15vw,3rem);line-height:1.22;margin-top:26px}
+.spe-salvi-frame .benedict-statement blockquote p{font:inherit;margin:0}
+.spe-salvi-frame .benedict-statement blockquote p+p{margin-top:.7em}
+@media(max-width:760px){
+ .spe-salvi-frame,.spe-salvi-frame .benedict-quote-layout{min-height:max(var(--frame),900px)}
+ .spe-salvi-frame .benedict-quote-layout>div{width:100%}
+ .spe-salvi-frame .benedict-quote-layout blockquote{font-size:clamp(1.3rem,5vw,1.8rem);line-height:1.22}
+}

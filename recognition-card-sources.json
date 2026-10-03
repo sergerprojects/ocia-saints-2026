@@ -1,0 +1,101 @@
+{
+  "checked": "2026-10-03",
+  "cards": [
+    {
+      "slug": "michelle",
+      "name": "Michelle Christine Duppong",
+      "status": "Servant of God",
+      "story": "A North Dakota FOCUS missionary who met cancer with faith and joy. Died on Christmas Day, 2015, at 31.",
+      "facts": [
+        [
+          "Cause",
+          "Life and virtues under investigation; opened in 2022."
+        ],
+        [
+          "Intercession",
+          "Reports of answered prayers are being gathered."
+        ],
+        [
+          "Feast day",
+          "Not yet assigned."
+        ]
+      ],
+      "sources": [
+        "https://michelleduppongcause.org/about-michelle",
+        "https://michelleduppongcause.org/the-cause"
+      ]
+    },
+    {
+      "slug": "matteo",
+      "name": "Matteo Farina",
+      "status": "Venerable",
+      "story": "An Italian teenager who shared his faith with friends and prayed with fellow cancer patients. Died at 18.",
+      "facts": [
+        [
+          "Path",
+          "Heroic virtue recognized in 2020."
+        ],
+        [
+          "Next step",
+          "An approved miracle for beatification."
+        ],
+        [
+          "Feast day",
+          "Not yet assigned."
+        ]
+      ],
+      "sources": [
+        "https://www.causesanti.va/it/venerabili/matteo-farina.html"
+      ]
+    },
+    {
+      "slug": "franz",
+      "name": "Franz Jägerstätter",
+      "status": "Blessed",
+      "story": "An Austrian farmer, husband, and father who refused to serve Hitler’s army because of his faith. Executed in 1943.",
+      "facts": [
+        [
+          "Path",
+          "Beatified as a martyr in 2007."
+        ],
+        [
+          "Miracle",
+          "Not required for a martyr’s beatification."
+        ],
+        [
+          "Feast day",
+          "May 21."
+        ]
+      ],
+      "sources": [
+        "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20071026_jagerstatter_en.html",
+        "https://www.dioezese-linz.at/institution/814501/aktuelles/article/6946.html",
+        "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2024/11/14/241114d.pdf"
+      ]
+    },
+    {
+      "slug": "carlo",
+      "name": "Carlo Acutis",
+      "status": "Saint",
+      "story": "A teenager who loved the Eucharist and used his computer skills to share the faith. Died of leukemia at 15.",
+      "facts": [
+        [
+          "Path",
+          "Canonized September 7, 2025."
+        ],
+        [
+          "Recognized miracles",
+          "Healing of a Brazilian child’s pancreatic disorder and a Costa Rican student’s severe head injury."
+        ],
+        [
+          "Feast day",
+          "October 12."
+        ]
+      ],
+      "sources": [
+        "https://www.causesanti.va/it/santi-e-beati/carlo-acutis.html",
+        "https://www.vaticannews.va/en/pope/news/2024-05/pope-francis-saints-decrees-miracle-acutis-allamano.html"
+      ]
+    }
+  ]
+}
