@@ -684,19 +684,16 @@ img{height:auto}
  .news-tile blockquote{font-size:1.55rem}
 }
 
-/* Keep both opening Sheen quotations together in one presentation frame. */
+/* Give the opening Sheen quotation the full presentation frame. */
 .sheen-quote{padding-block:clamp(40px,7vh,80px)}
-.sheen-quote .sheen-quote-pair{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,100px);align-items:center}
-.sheen-quote-pair figure{margin:0}
-.sheen-quote-pair figure+figure{border-left:1px solid rgba(244,240,230,.28);padding-left:clamp(32px,5vw,80px)}
-.sheen-quote-pair .kicker{display:block;max-width:34em;font-size:clamp(.65rem,.9vw,.85rem);line-height:1.6;margin:0 0 24px}
-.sheen-quote .sheen-quote-pair blockquote{font-size:clamp(2rem,3.3vw,4.25rem);line-height:1.15;margin:0;text-wrap:pretty}
-.sheen-quote-pair blockquote em{color:#efc6cc}
+.sheen-quote .sheen-quote-single{max-width:1100px}
+.sheen-quote-single figure{margin:0}
+.sheen-quote-single .kicker{display:block;font-size:clamp(.7rem,.9vw,.85rem);line-height:1.6;margin:0 0 26px}
+.sheen-quote .sheen-quote-single blockquote{font-size:clamp(2.65rem,4.8vw,5.3rem);line-height:1.13;margin:0;text-wrap:pretty}
+.sheen-quote-single blockquote em{color:#efc6cc}
 @media(max-width:760px){
- .sheen-quote .sheen-quote-pair{grid-template-columns:1fr;gap:32px}
- .sheen-quote-pair figure+figure{border-left:0;border-top:1px solid rgba(244,240,230,.28);padding:32px 0 0}
- .sheen-quote-pair .kicker{margin-bottom:16px}
- .sheen-quote .sheen-quote-pair blockquote{font-size:clamp(1.7rem,5.7vw,2.4rem)}
+ .sheen-quote-single .kicker{margin-bottom:20px}
+ .sheen-quote .sheen-quote-single blockquote{font-size:clamp(2rem,6.8vw,3.2rem)}
 }
 
 /* The complete Spe salvi passage over Benedict's portrait. */
