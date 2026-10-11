@@ -240,7 +240,7 @@ html{scroll-behavior:auto}
 .heroes-beat{padding:0;background:var(--ink)}.heroes-grid{gap:4px;min-height:var(--frame)}.heroes-grid figure{overflow:hidden;margin:0}.heroes-grid img{height:var(--frame);min-height:450px;filter:saturate(.84)}
 .dark-figure{width:60%;height:100%;opacity:1;overflow:hidden}.dark-figure img{filter:brightness(.48) saturate(.8)}.chapter-dark:has(.dark-figure)::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 25%,transparent 85%);pointer-events:none}.chapter-dark:has(.dark-figure) .chapter-heading{z-index:2}
 .scripture-grid{min-height:var(--frame);align-items:center;padding-block:75px}.scripture-grid .scripture-head{max-width:1200px}.matthew-passage h2{font-size:clamp(2.7rem,4.3vw,5.2rem)}.matthew-conclusion{font-family:var(--display);color:var(--ox)}
-.statement{min-height:65svh;display:flex;align-items:center;justify-content:center}.statement p{margin:0}
+.statement{min-height:var(--frame);display:flex;align-items:center;justify-content:center}.statement p{margin:0}
 .communion-painting{height:auto;min-height:var(--frame);background:var(--ink);overflow:visible;isolation:auto;padding:0}
 .communion-painting::after{display:none}.sequence-stage{position:relative;min-height:var(--frame)}
 .communion-painting .sequence-stage{isolation:isolate;overflow:hidden;background:var(--ink);display:flex;align-items:center}
