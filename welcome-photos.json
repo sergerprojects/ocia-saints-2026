@@ -1,0 +1,140 @@
+[
+  {
+    "name": "Bernadette Soubirous",
+    "src": "welcome-images/saint-00.webp",
+    "width": 1240,
+    "height": 1600,
+    "source": "https://commons.wikimedia.org/wiki/File:Bernadette_Soubirous.jpg",
+    "credit": "abbé P. Bernadou",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "description": "Bernadette Soubirous when a child."
+  },
+  {
+    "name": "Pier Giorgio Frassati",
+    "src": "welcome-images/saint-11.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:PierGiorgioFrassati-Pr%C3%A9sentation.jpg",
+    "credit": "Historical photograph, unknown photographer",
+    "license": "Public domain",
+    "licenseUrl": ""
+  },
+  {
+    "name": "Edith Stein",
+    "src": "welcome-images/saint-01.webp",
+    "width": 1408,
+    "height": 1600,
+    "source": "https://commons.wikimedia.org/wiki/File:Edith_Stein_(ca._1938-1939).jpg",
+    "credit": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "description": "The so-called \"passport\" photo taken in the doorway of the Cologne Carmel. A passport picture that Edith Stein (1891–1942) had to have taken for her passport (ca. December 1938-1939) before moving to Echt, Netherlands.\nEdith Stein, a German Jewish philosopher, converted to the Roman Catholic Church, became a Discalced Carmelite nun and took the religious name of Teresa Benedicta of the Cross. On 7 August 1942, she was deported to the Auschwitz concentration camp and killed in a mass gas chamber."
+  },
+  {
+    "name": "Elizabeth of the Trinity",
+    "src": "welcome-images/saint-02.webp",
+    "width": 928,
+    "height": 1299,
+    "source": "https://commons.wikimedia.org/wiki/File:Visage_d%27Elisabeth_de_la_Trinit%C3%A9.jpg",
+    "credit": "Willuconquer",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "description": "Face portrait of Elisabeth of the Trinity"
+  },
+  {
+    "name": "John Bosco",
+    "src": "welcome-images/saint-03.webp",
+    "width": 712,
+    "height": 953,
+    "source": "https://commons.wikimedia.org/wiki/File:Don_Bosco_@_Torino,_1880_(original).jpg",
+    "credit": "Attributed to Carlo Felice Deasti",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "description": "Don Bosco la Torino în 1880 (fotografie originală)."
+  },
+  {
+    "name": "Maximilian Kolbe",
+    "src": "welcome-images/saint-04.webp",
+    "width": 726,
+    "height": 981,
+    "source": "https://commons.wikimedia.org/wiki/File:Fr.Maximilian_Kolbe_in_1936.jpg",
+    "credit": "\nUnknown authorUnknown author",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "description": "Maximilian Kolbe in 1936"
+  },
+  {
+    "name": "Thérèse of Lisieux",
+    "src": "welcome-images/saint-06.webp",
+    "width": 565,
+    "height": 720,
+    "source": "https://commons.wikimedia.org/wiki/File:Teresa-de-Lisieux.jpg",
+    "credit": "Céline Martin",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "description": "Detail of St. Therese of the Child Jesus in the photograph taken in the courtyard of the monastery of Lisieux Easter Monday, April 15, 1895."
+  },
+  {
+    "name": "Pope John Paul II",
+    "src": "john-paul-friends.webp",
+    "source": "https://sergerprojects.github.io/ocia-saints-2026/",
+    "credit": "Photograph from the original class presentation; photographer unidentified",
+    "license": "Original teaching collection",
+    "licenseUrl": ""
+  },
+  {
+    "name": "Pope John Paul II",
+    "src": "john-paul-greeting.webp",
+    "source": "https://sergerprojects.github.io/ocia-saints-2026/",
+    "credit": "Photograph from the original class presentation; photographer unidentified",
+    "license": "Original teaching collection",
+    "licenseUrl": ""
+  },
+  {
+    "name": "Pope John Paul II",
+    "src": "john-paul-koala.webp",
+    "source": "https://sergerprojects.github.io/ocia-saints-2026/",
+    "credit": "Photograph from the original class presentation; photographer unidentified",
+    "license": "Original teaching collection",
+    "licenseUrl": ""
+  },
+  {
+    "name": "Pope John Paul II",
+    "src": "john-paul-skiing.webp",
+    "source": "https://sergerprojects.github.io/ocia-saints-2026/",
+    "credit": "Photograph from the original class presentation; photographer unidentified",
+    "license": "Original teaching collection",
+    "licenseUrl": ""
+  },
+  {
+    "name": "Gianna Beretta Molla",
+    "src": "gianna.webp",
+    "source": "https://sergerprojects.github.io/ocia-saints-2026/",
+    "credit": "Photograph from the original class presentation; photographer unidentified",
+    "license": "Original teaching collection",
+    "licenseUrl": ""
+  },
+  {
+    "name": "Padre Pio",
+    "src": "pio-collage-portrait.webp",
+    "source": "https://sergerprojects.github.io/ocia-saints-2026/",
+    "credit": "Photograph from the original class presentation; photographer unidentified",
+    "license": "Original teaching collection",
+    "licenseUrl": ""
+  },
+  {
+    "name": "Padre Pio",
+    "src": "pio-collage-friends.webp",
+    "source": "https://sergerprojects.github.io/ocia-saints-2026/",
+    "credit": "Photograph from the original class presentation; photographer unidentified",
+    "license": "Original teaching collection",
+    "licenseUrl": ""
+  },
+  {
+    "name": "Padre Pio",
+    "src": "pio-collage-young.webp",
+    "source": "https://sergerprojects.github.io/ocia-saints-2026/",
+    "credit": "Photograph from the original class presentation; photographer unidentified",
+    "license": "Original teaching collection",
+    "licenseUrl": ""
+  }
+]
