@@ -47,7 +47,7 @@
         const rule = document.createElement('div'); rule.className = 'rule'; const invitation = document.createElement('p'); invitation.className = 'invitation'; invitation.textContent = 'Welcome · Becoming Catholic';
         copy.append(eyebrow, name, detail, rule, invitation); scene.append(portrait, copy);
       }
-      gallery.append(scene); await new Promise(requestAnimationFrame); scene.classList.add('active');
+      gallery.append(scene); void scene.offsetWidth; await new Promise(requestAnimationFrame); scene.classList.add('active');
       const old = current; current = scene; if (old) { old.classList.remove('active'); old.setAttribute('aria-hidden', 'true'); setTimeout(() => old.remove(), 1900); }
       gallery.querySelector('.intro')?.remove();
       // Preload upcoming frames; failures are handled when the frame is displayed.
