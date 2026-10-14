@@ -4,4 +4,6 @@
 @media(prefers-reduced-motion:reduce){.scene{transition:none}.photo,.trio img{animation:none!important}}
 /* Reserve room for controls and let caption content determine its own height. */
 @media(max-width:700px){.scene{grid-template-rows:minmax(0,1fr) auto;padding-bottom:180px}.copy{padding:8px 8vw 16px}.copy h1{font-size:clamp(32px,8.5vw,54px)}.copy .detail{font-size:18px}.controls{bottom:10px}}
-@media(max-width:700px) and (max-height:500px){header{padding:16px 22px}.scene{grid-template-columns:46% 54%;grid-template-rows:1fr;padding-top:65px;padding-bottom:85px}.portrait{grid-column:2;grid-row:1}.copy{grid-column:1;grid-row:1;align-self:center;padding:12px 0 12px 5vw}.copy h1{font-size:clamp(26px,5.5vw,38px);margin-bottom:12px}.copy .detail{font-size:16px}.copy .eyebrow{display:none}}
+@media(max-width:1024px) and (max-height:500px){header{padding:16px 22px}.scene{grid-template-columns:46% 54%;grid-template-rows:1fr;padding-top:65px;padding-bottom:85px}.portrait{grid-column:2;grid-row:1}.copy{grid-column:1;grid-row:1;align-self:center;padding:12px 0 12px 5vw}.copy h1{font-size:clamp(26px,5.5vw,38px);margin-bottom:12px}.copy .detail{font-size:16px}.copy .eyebrow{display:none}}
+
+@media(max-width:700px){.controls{width:95vw}}
